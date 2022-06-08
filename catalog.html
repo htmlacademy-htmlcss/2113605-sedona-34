@@ -48,11 +48,7 @@
     </nav>
   </header>
 
-  <main class="main-inner container">
-
-    <section class="">
-
-    </section>
+  <main class="main-inner container container-main">
 
     <header class="inner-header">
       <h1 class="inner-header-title">Гостиницы Седоны</h1>
@@ -67,7 +63,7 @@
         </li>
       </ul>
 
-      <form action="https://echo.htmlacademy.ru/" method="post">
+      <form class="form-catalog-filter" action="https://echo.htmlacademy.ru/" method="post">
         <h2 class="visually-hidden">Фильтр по гостиницам</h2>
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -115,8 +111,10 @@
             </li>
           </ul>
         </fieldset>
-        <button class="button button-second" type="submit">Применить</button>
-        <button class="button button-reset" type="reset">Сбросить</button>
+        <div class="catalog-filter-group catalog-filter-button">
+          <button class="button button-second" type="submit">Применить</button>
+          <button class="button button-reset" type="reset">Сбросить</button>
+        </div>
       </form>
     </header>
 
@@ -159,7 +157,7 @@
             <a class="product-card-button button" href="#">подробнее</a>
             <a class="product-card-button button button-second" href="#">в избранное</a>
           </p>
-          <p class="product-rating">
+          <div class="product-rating">
             <ul class="rating-stars">
               <li class="star"></li>
               <li class="star"></li>
@@ -169,7 +167,7 @@
             <p class="rating-text">
               Рейтинг: <span>8,5</span>
             </p>
-          </p>
+          </div>
         </li>
         <li class="product-card">
           <a class="product-card-link" href="#">
@@ -185,7 +183,7 @@
             <a class="product-card-button button" href="#">подробнее</a>
             <a class="product-card-button button button-success" href="#">в избранном</a>
           </p>
-          <p class="product-rating">
+          <div class="product-rating">
             <ul class="rating-stars">
               <li class="star"></li>
               <li class="star"></li>
@@ -195,7 +193,7 @@
             <p class="rating-text">
               Рейтинг: <span>9,2</span>
             </p>
-          </p>
+          </div>
         </li>
         <li class="product-card">
           <a class="product-card-link" href="#">
@@ -211,7 +209,7 @@
             <a class="product-card-button button" href="#">подробнее</a>
             <a class="product-card-button button button-second" href="#">в избранное</a>
           </p>
-          <p class="product-rating">
+          <div class="product-rating">
             <ul class="rating-stars">
               <li class="star"></li>
               <li class="star"></li>
@@ -220,7 +218,7 @@
             <p class="rating-text">
               Рейтинг: <span>6,9</span>
             </p>
-          </p>
+          </div>
         </li>
         <li class="product-card">
           <a class="product-card-link" href="#">
@@ -236,7 +234,7 @@
             <a class="product-card-button button" href="#">подробнее</a>
             <a class="product-card-button button button-second" href="#">в избранное</a>
           </p>
-          <p class="product-rating">
+          <div class="product-rating">
             <ul class="rating-stars">
               <li class="star"></li>
               <li class="star"></li>
@@ -244,46 +242,50 @@
             <p class="rating-text">
               Рейтинг: <span>5,0</span>
             </p>
-          </p>
+          </div>
         </li>
       </ul>
 
-      <ul class="pagination">
-        <li class="pagination-item">
-          <a class="pagination-link pagination-current">1</a>
-        </li>
-        <li class="pagination-item">
-          <a class="pagination-link" href="#">2</a>
-        </li>
-        <li class="pagination-item">
-          <a class="pagination-link" href="#">3</a>
-        </li>
-        <li class="pagination-item">
-          <a class="pagination-link" href="#">4</a>
-        </li>
-        <li class="pagination-item">
-          <a class="pagination-link" href="#">...</a>
-        </li>
-        <li class="pagination-item">
-          <a class="pagination-link" href="#">10</a>
-        </li>
-      </ul>
+      <footer class="catalog-products-footer">
+        <ul class="pagination">
+          <li class="pagination-item">
+            <a class="pagination-link pagination-current">1</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">2</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">3</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">4</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">...</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">10</a>
+          </li>
+        </ul>
+  
+  
+        <p class="product-sort">
+          <span class="product-sort-text">Гостиниц на странице:</span>
+  
+          <select class="select-control" aria-label="Сортировка">
+            <option value="4">4</option>
+            <option value="8">8</option>
+            <option value="12">12</option>
+            <option value="16">16</option>
+            <option value="20">20</option>
+          </select>
+        </p>
+      </footer>
 
 
-      <p class="product-sort">
-        <span class="product-sort-text">Гостиниц на странице:</span>
-
-        <select class="select-control" aria-label="Сортировка">
-          <option value="4">4</option>
-          <option value="8">8</option>
-          <option value="12">12</option>
-          <option value="16">16</option>
-          <option value="20">20</option>
-        </select>
-      </p>
     </section>
 
-    <article class="subscription">
+    <article class="subscription subscription-inner">
       <h2 class="subscription-title">Подпишитесь на рассылку</h2>
       <p class="subscription-description">
         Только полезная информация и никакого спама, честное бойскаутское!
