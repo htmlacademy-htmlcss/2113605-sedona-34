@@ -557,7 +557,7 @@ body {
 
   display: flex;
   flex-flow: row wrap;
-  gap: 18px;
+  gap: 0 18px;
 }
 
 .product-card {
