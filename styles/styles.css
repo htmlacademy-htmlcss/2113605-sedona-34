@@ -197,6 +197,7 @@ body {
 .hero {
   text-align: center;
   background-color: #FFFFFF;
+  margin-bottom: 90px;
 }
 
 .hero p:last-of-type {
