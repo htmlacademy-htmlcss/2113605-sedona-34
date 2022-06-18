@@ -71,6 +71,7 @@ body {
   background-color: #FFFFFF;
   padding: 0 70px;
   max-height: 65px;
+  z-index: 1;
 
   display: flex;
   align-items: center;
@@ -79,6 +80,7 @@ body {
 .header-logo {
   flex-shrink: 0;
   z-index: 1;
+  margin-right: 47px;
 }
 
 .navigation {
@@ -109,6 +111,12 @@ body {
   color: #000000;
   text-decoration: none;
   background-color: #FFFFFF;
+  padding: 20px 0;
+  padding-bottom: 18px;
+}
+
+.navigation-link-active {
+  border-bottom: 2px solid #756257;
 }
 
 .navigation-link-search {
@@ -674,6 +682,10 @@ body {
   box-sizing: border-box;
 
   position: relative;
+}
+
+.catalog-sort .button-light-active {
+  border-color: #000000;
 }
 
 .catalog-sort .button-light+.button-light {
