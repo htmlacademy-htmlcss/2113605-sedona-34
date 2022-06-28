@@ -584,9 +584,8 @@ body {
 }
 
 .catalog-filter-group.catalog-filter-button {
-  margin-left: auto;
   text-align: center;
-  align-self: flex-end;
+  margin-top: 55px;
 }
 
 .catalog-filter-button .button-reset {
@@ -711,6 +710,11 @@ body {
 }
 
 /* Range */
+
+.catalog-filter-group.catalog-filter-group-range {
+  margin-left: auto;
+}
+
 .range-scale {
   position: relative;
   height: 4px;
