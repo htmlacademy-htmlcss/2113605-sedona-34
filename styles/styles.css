@@ -71,6 +71,7 @@ body {
   background-color: #FFFFFF;
   padding: 0 70px;
   max-height: 65px;
+  z-index: 1;
 
   display: flex;
   align-items: center;
@@ -79,6 +80,7 @@ body {
 .header-logo {
   flex-shrink: 0;
   z-index: 1;
+  margin-right: 47px;
 }
 
 .navigation {
@@ -109,6 +111,12 @@ body {
   color: #000000;
   text-decoration: none;
   background-color: #FFFFFF;
+  padding: 20px 0;
+  padding-bottom: 18px;
+}
+
+.navigation-link-active {
+  border-bottom: 2px solid #756257;
 }
 
 .navigation-link-search {
@@ -561,6 +569,54 @@ body {
 
 /* catalog-filter */
 
+.control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.control-mark {
+  position: relative;
+  margin-right: 19px;
+}
+
+.control-mark {
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 4px;
+}
+
+.control-mark:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  background: url(../images/icons/tick.svg) center center / contain no-repeat;
+  width: 12px;
+  height: 9px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.control-input[type="checkbox"]:checked+.control-mark::after,
+.control-input[type="radio"]:checked+.control-mark::after {
+  opacity: 1;
+}
+
+.control-radio .control-mark {
+  border-radius: 50%;
+}
+
+.control-radio .control-mark:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #3F5E72;
+}
+
 .form-catalog-filter {
   display: flex;
 }
@@ -576,9 +632,8 @@ body {
 }
 
 .catalog-filter-group.catalog-filter-button {
-  margin-left: auto;
   text-align: center;
-  align-self: flex-end;
+  margin-top: 55px;
 }
 
 .catalog-filter-button .button-reset {
@@ -659,10 +714,6 @@ body {
   border-radius: 4px;
 }
 
-
-
-
-
 .catalog-sort .button-light {
   width: 48px;
   height: 48px;
@@ -674,6 +725,10 @@ body {
   box-sizing: border-box;
 
   position: relative;
+}
+
+.catalog-sort .button-light-active {
+  border-color: #000000;
 }
 
 .catalog-sort .button-light+.button-light {
@@ -700,6 +755,99 @@ body {
 
 .catalog-sort-list:after {
   background: url(../images/icons/icon-list.png) center center / contain no-repeat;
+}
+
+/* Range */
+
+.catalog-filter-group.catalog-filter-group-range {
+  margin-left: auto;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+  left: 0;
+  width: 227px;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+
+.toggle-min {
+  top: -8px;
+  left: 0;
+}
+
+.toggle-max {
+  top: -8px;
+  right: 0;
+}
+
+.range-wrapper-inputs {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border: 2px solid #FFFFFF;
+  border-radius: 4px;
+  width: 287px;
+  height: 48px;
+  margin-bottom: 30px;
+}
+
+.range-wrapper-inputs:after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: #ffffff;
+  transform: translate(-50%, 0);
+}
+
+.catalog-filter-label {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  width: 50%;
+  color: rgba(255, 255, 255, 0.3);
+  padding-right: 14px;
+}
+
+.range-input {
+  width: 100%;
+  padding: 14px 19px;
+  font: inherit;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  appearance: textfield;
+  outline: none;
+  color: #FFFFFF;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 

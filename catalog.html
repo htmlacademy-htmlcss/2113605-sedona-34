@@ -69,20 +69,23 @@
           <legend class="catalog-filter-title">Инфраструктура:</legend>
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
-              <label class="control">
-                <input class="control-input" type="checkbox" name="swimming-pool">
-                Бассейн
+              <label class="control control-checkbox">
+                <input class="control-input visually-hidden" type="checkbox" name="swimming-pool">
+                <span class="control-mark"></span>
+                Бассейн         
               </label>
             </li>
             <li class="catalog-filter-item">
-              <label class="control">
-                <input class="control-input" type="checkbox" name="parking">
+              <label class="control control-checkbox">
+                <input class="control-input visually-hidden" type="checkbox" name="parking">
+                <span class="control-mark"></span>
                 Парковка
               </label>
             </li>
             <li class="catalog-filter-item">
-              <label class="control">
-                <input class="control-input" type="checkbox" name="wi-fi">
+              <label class="control control-checkbox">
+                <input class="control-input visually-hidden" type="checkbox" name="wi-fi">
+                <span class="control-mark"></span>
                 Wi-Fi
               </label>
             </li>
@@ -92,24 +95,55 @@
           <legend class="catalog-filter-title">Тип жилья:</legend>
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
-              <label class="control">
-                <input class="control-input" type="radio" name="product-type" value="hotel">
+              <label class="control control-radio">
+                <input class="control-input visually-hidden" type="radio" name="product-type" value="hotel">
+                <span class="control-mark"></span>
                 Гостиница
               </label>
             </li>
             <li class="catalog-filter-item">
-              <label class="control">
-                <input class="control-input" type="radio" name="product-type" value="motel">
+              <label class="control control-radio">
+                <input class="control-input visually-hidden" type="radio" name="product-type" value="motel">
+                <span class="control-mark"></span>
                 Мотель
               </label>
             </li>
             <li class="catalog-filter-item">
-              <label class="control">
-                <input class="control-input" type="radio" name="product-type" value="apartments">
+              <label class="control control-radio">
+                <input class="control-input visually-hidden" type="radio" name="product-type" value="apartments">
+                <span class="control-mark"></span>
                 Апартаменты
               </label>
             </li>
           </ul>
+        </fieldset>
+
+        <fieldset class="catalog-filter-group catalog-filter-group-range">
+          <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+
+          <div class="range-wrapper-inputs">
+            <label class="catalog-filter-label">
+               <input class="range-input" type="number" value="0" name="min-price"> от
+            </label>
+            <label class="catalog-filter-label">
+               <input class="range-input" type="number" value="9000" name="max-price"> до
+            </label>
+          </div>
+
+          <div class="range">
+            <div class="range-scale">
+              <div class="range-bar">
+                <button class="range-toggle toggle-min">
+                  <span class="visually-hidden">Изменить минимальную цену.</span>
+                </button>
+                <button class="range-toggle toggle-max">
+                  <span class="visually-hidden">Изменить максимальную цену.</span>
+                </button>
+              </div>
+            </div>
+
+
+          </div>
         </fieldset>
         <div class="catalog-filter-group catalog-filter-button">
           <button class="button button-second" type="submit">Применить</button>
@@ -134,7 +168,7 @@
           </select>
         </div>
 
-        <a class="button button-light catalog-sort-card" href="#">
+        <a class="button button-light button-light-active catalog-sort-card" href="#">
           <span class="visually-hidden">Показать карточки</span>
         </a>
         <a href="#" class="button button-light catalog-sort-full">
