@@ -569,6 +569,54 @@ body {
 
 /* catalog-filter */
 
+.control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.control-mark {
+  position: relative;
+  margin-right: 19px;
+}
+
+.control-mark {
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 4px;
+}
+
+.control-mark:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  background: url(../images/icons/tick.svg) center center / contain no-repeat;
+  width: 12px;
+  height: 9px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.control-input[type="checkbox"]:checked+.control-mark::after,
+.control-input[type="radio"]:checked+.control-mark::after {
+  opacity: 1;
+}
+
+.control-radio .control-mark {
+  border-radius: 50%;
+}
+
+.control-radio .control-mark:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #3F5E72;
+}
+
 .form-catalog-filter {
   display: flex;
 }
