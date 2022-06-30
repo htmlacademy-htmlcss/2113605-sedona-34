@@ -94,7 +94,8 @@
           </p>
         </li>
         <li class="advantages-item">
-          <img class="advantages-img" src="images/advantages/advantages-2.jpg" width="800" height="384" alt="фото моста">
+          <img class="advantages-img" src="images/advantages/advantages-2.jpg" width="800" height="384"
+            alt="фото моста">
           <div class="advantages-item-inner">
             <h3 class="advantages-title">Там есть <br> мост дьявола</h3>
             <p class="advantages-number">— №2 —</p>
@@ -175,7 +176,6 @@
     </section>
 
     <address class="contacts">
-      <h2 class="visually-hidden">Контакты</h2>
       <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
     </address>
 
@@ -185,11 +185,60 @@
     </a>
   </footer>
 
-  <!-- <div class="modal-container">
+  <div class="modal-container modal-container-close">
     <div class="modal modal-search">
-      
+      <header class="modal-header">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+      </header>
+      <section class="modal-content">
+        <h3 class="visually-hidden">Форма поиска гостиницы в Седоне</h3>
+        <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="field-group">
+            <label class="search-form-label search-form-label-date" for="search-date-start">
+              Дата заезда:
+              <input class="search-form-field field" type="text" id="search-date-start" name="date-start" placeholder="Укажите дату">
+            </label>
+            <p class="search-form-subtext search-form-error">Мы не можем отправить вас в прошлое.</p>
+          </div>
+          <div class="field-group">
+            <label class="search-form-label search-form-label-date" for="search-date-end">
+              Дата выезда:
+              <input class="search-form-field field" type="text" id="search-date-end" name="date-end" placeholder="Укажите дату">
+            </label>
+            <p class="search-form-subtext">На эти даты есть свободные номера. Пока есть.</p>
+          </div>
+          <div class="field-group field-group-line">
+            <div class="search-form-label">
+              Взрослые:
+              <div class="field-group-count">
+                <button type="button" class="button-count button-count-minus"></button>
+                <input class="search-form-field field" type="text" id="search-adults" name="adults" placeholder="0">
+                <button type="button" class="button-count button-count-plus"></button>
+              </div>
+            </div>
+            <div class="search-form-label search-form-label-end">
+              <div class="search-form-info">
+                <p class="search-form-info-content">
+                  Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет
+                  размещаются бесплатно.
+                </p>
+              </div>
+              Дети:
+              <div class="field-group-count field-group-count-info">
+                <button type="button" class="button-count button-count-minus"></button>
+                <input class="search-form-field field" type="text" id="search-children" name="children" placeholder="0">
+                <button type="button" class="button-count button-count-plus"></button>
+              </div>
+            </div>
+          </div>
+          <button class="button button-second search-form-button" type="submit">найти</button>
+        </form>
+      </section>
     </div>
-  </div> -->
+  </div>
 
 </body>
 
