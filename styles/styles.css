@@ -113,6 +113,15 @@ body {
   background-color: #FFFFFF;
   padding: 20px 0;
   padding-bottom: 18px;
+  transition: all 0.3s;
+}
+
+.navigation-link:hover:not(.button) {
+  opacity: 0.5;
+}
+
+.navigation-link:focus {
+  outline: 2px solid #82B3D3;
 }
 
 .navigation-link-active {
@@ -122,6 +131,7 @@ body {
 .navigation-link-search {
   width: 18px;
   height: 18px;
+  min-height: 65px;
   display: flex;
   background: url(../images/icons/search.svg) center center / contain no-repeat;
 }
@@ -129,6 +139,7 @@ body {
 .navigation-link-favorites {
   width: 18px;
   height: 17px;
+  min-height: 65px;
   display: flex;
   background: url(../images/icons/favorite.svg) center center / contain no-repeat;
   position: relative;
@@ -136,8 +147,8 @@ body {
 
 .favorites-counter {
   position: absolute;
-  top: 0;
-  right: -12px;
+  top: 15px;
+  right: -16px;
   background-color: #7DB54F;
   width: 20px;
   height: 20px;
@@ -468,7 +479,7 @@ body {
   min-height: 411px;
   color: #ffffff;
   text-align: center;
-
+  padding: 95px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -835,6 +846,7 @@ a.breadcrumbs-link:active {
   color: #333333;
   transition: all 0.3s;
   border: 2px solid #E5E5E5;
+  font-family: inherit;
 }
 
 .select-control:hover {
@@ -978,7 +990,7 @@ a.breadcrumbs-link:active {
 
 .toggle-max {
   top: -8px;
-  right: 0;
+  right: -8px;
 }
 
 .range-wrapper-inputs {
@@ -1236,6 +1248,7 @@ a.breadcrumbs-link:active {
 }
 
 .product-sort .select-control {
+  
   width: 160px;
   height: 49px;
   -webkit-appearance: none;
