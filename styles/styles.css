@@ -479,7 +479,7 @@ body {
   min-height: 411px;
   color: #ffffff;
   text-align: center;
-  padding: 95px 0;
+  padding: 93px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -505,10 +505,17 @@ body {
   line-height: 26px;
   margin: 0;
   margin-bottom: 45px;
+
 }
 
 .subscription-form {
   display: flex;
+  border: 2px solid transparent;
+}
+
+.subscription-form:focus-within {
+  border: 2px solid #83B3D3;
+  border-radius: 10px;
 }
 
 .subscription-field {
@@ -529,6 +536,10 @@ body {
 
 .subscription-field::placeholder {
   opacity: 0.6;
+}
+
+.subscription-field:focus {
+  background-color: #d0d7e3;
 }
 
 .subscription-button {
