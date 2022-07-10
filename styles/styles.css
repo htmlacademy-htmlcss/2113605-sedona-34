@@ -79,6 +79,7 @@ body {
   flex-shrink: 0;
   z-index: 1;
   margin-right: 47px;
+  align-self: flex-start;
 }
 
 .navigation {
@@ -311,7 +312,7 @@ body {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  max-width: 620px;
+  max-width: 640px;
   margin: 0 auto;
   margin-bottom: 31px;
   text-transform: uppercase;
@@ -324,6 +325,7 @@ body {
   color: #333333;
   margin: 0;
   margin-bottom: 90px;
+  padding: 0 40px;
 }
 
 /* advantages */
@@ -346,20 +348,32 @@ body {
   min-height: 384px;
 }
 
+.advantages-item:not(.advantages-item-full) {
+  padding: 79px;
+}
+
+.advantages-item.advantages-item-not-image {
+  padding: 98px 70px;
+}
+
 .advantages-item-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   flex-basis: 400px;
+  padding: 93px 85px;
 }
 
 .advantages-item-small {
   flex-basis: 400px;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  
+
+  background-color: rgba(131, 179, 211, 0.12);
+  color: #000000;
 }
+
 
 .advantages-title {
   font-weight: 700;
@@ -402,18 +416,14 @@ body {
 
 .advantages-description {
   color: #FFFFFF;
-  max-width: 230px;
   text-align: center;
   margin: 0;
 }
 
 .advantages-img {
   display: block;
-}
-
-.advantages-item-small {
-  background-color: rgba(131, 179, 211, 0.12);
-  color: #000000;
+  height: 100%;
+  object-fit: cover;
 }
 
 .advantages-item-small .advantages-title {
@@ -441,7 +451,8 @@ body {
 
 .hotel-search {
   text-align: center;
-  padding: 91px 0;
+  padding: 86px 40px;
+  padding-bottom: 92px;
 }
 
 .hotel-search-title {
@@ -455,15 +466,15 @@ body {
 
 .hotel-search-text {
   font-size: 22px;
-  line-height: 25px;
+  line-height: 26px;
   color: #333333;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 56px;
+  max-width: 670px;
 }
 
 .hotel-button {
-  font-weight: 700;
-  font-size: 20px;
+  font-size: 21px;
   line-height: 36px;
 
   display: flex;
@@ -484,7 +495,7 @@ body {
   min-height: 411px;
   color: #ffffff;
   text-align: center;
-  padding: 93px 0;
+  padding: 93px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -502,7 +513,7 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 29px;
 }
 
 .subscription-description {
@@ -629,6 +640,10 @@ body {
   height: 17px;
 }
 
+.contacts {
+  max-width: 335px;
+}
+
 .contacts-phone {
   color: #000000;
   font-style: normal;
@@ -637,6 +652,8 @@ body {
   line-height: 40px;
   text-decoration: none;
   transition: color 0.3s;
+  white-space: nowrap;
+  display: block;
 }
 
 .contacts-phone:hover,
@@ -867,6 +884,7 @@ a.breadcrumbs-link:active {
   transition: all 0.3s;
   border: 2px solid #E5E5E5;
   font-family: inherit;
+  background-color: #ffffff;
 }
 
 .select-control:hover {
