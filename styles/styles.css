@@ -31,7 +31,7 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100%;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
@@ -79,6 +79,7 @@ body {
   flex-shrink: 0;
   z-index: 1;
   margin-right: 47px;
+  align-self: flex-start;
 }
 
 .navigation {
@@ -138,7 +139,7 @@ body {
   height: 18px;
   min-height: 65px;
   display: flex;
-  background: url(../images/icons/search.svg) center center / contain no-repeat;
+  background: url("../images/icons/search.svg") center center / contain no-repeat;
 }
 
 .navigation-link-favorites {
@@ -146,7 +147,7 @@ body {
   height: 17px;
   min-height: 65px;
   display: flex;
-  background: url(../images/icons/favorite.svg) center center / contain no-repeat;
+  background: url("../images/icons/favorite.svg") center center / contain no-repeat;
   position: relative;
 }
 
@@ -288,7 +289,7 @@ body {
 }
 
 .hero-welcome {
-  background: url(../images/index-background.jpg) center center / cover no-repeat, #000000;
+  background: url("../images/index-background.jpg") center center / cover no-repeat, #000000;
   width: 100%;
   max-width: 1200px;
   height: 485px;
@@ -304,14 +305,14 @@ body {
   left: 0;
   width: 100%;
   height: 57px;
-  background: url(../images/icons/divider.svg) center center / cover no-repeat;
+  background: url("../images/icons/divider.svg") center center / cover no-repeat;
 }
 
 .hero-text-big {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  max-width: 620px;
+  max-width: 640px;
   margin: 0 auto;
   margin-bottom: 31px;
   text-transform: uppercase;
@@ -324,6 +325,7 @@ body {
   color: #333333;
   margin: 0;
   margin-bottom: 90px;
+  padding: 0 40px;
 }
 
 /* advantages */
@@ -346,20 +348,32 @@ body {
   min-height: 384px;
 }
 
+.advantages-item:not(.advantages-item-full) {
+  padding: 79px;
+}
+
+.advantages-item.advantages-item-not-image {
+  padding: 98px 70px;
+}
+
 .advantages-item-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   flex-basis: 400px;
+  padding: 93px 85px;
 }
 
 .advantages-item-small {
   flex-basis: 400px;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  
+
+  background-color: rgba(131, 179, 211, 0.12);
+  color: #000000;
 }
+
 
 .advantages-title {
   font-weight: 700;
@@ -383,15 +397,15 @@ body {
 }
 
 .advantages-title-house::before {
-  background: url(../images/advantages/house.svg) center center / contain no-repeat;
+  background: url("../images/advantages/house.svg") center center / contain no-repeat;
 }
 
 .advantages-title-food::before {
-  background: url(../images/advantages/food.svg) center center / contain no-repeat;
+  background: url("../images/advantages/food.svg") center center / contain no-repeat;
 }
 
 .advantages-title-souvenirs::before {
-  background: url(../images/advantages/souvenir.svg) center center / contain no-repeat;
+  background: url("../images/advantages/souvenir.svg") center center / contain no-repeat;
 }
 
 .advantages-number {
@@ -402,18 +416,14 @@ body {
 
 .advantages-description {
   color: #FFFFFF;
-  max-width: 230px;
   text-align: center;
   margin: 0;
 }
 
 .advantages-img {
   display: block;
-}
-
-.advantages-item-small {
-  background-color: rgba(131, 179, 211, 0.12);
-  color: #000000;
+  height: 100%;
+  object-fit: cover;
 }
 
 .advantages-item-small .advantages-title {
@@ -441,7 +451,8 @@ body {
 
 .hotel-search {
   text-align: center;
-  padding: 91px 0;
+  padding: 86px 40px;
+  padding-bottom: 92px;
 }
 
 .hotel-search-title {
@@ -455,15 +466,15 @@ body {
 
 .hotel-search-text {
   font-size: 22px;
-  line-height: 25px;
+  line-height: 26px;
   color: #333333;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 56px;
+  max-width: 670px;
 }
 
 .hotel-button {
-  font-weight: 700;
-  font-size: 20px;
+  font-size: 21px;
   line-height: 36px;
 
   display: flex;
@@ -478,13 +489,13 @@ body {
 /* subscription */
 
 .subscription {
-  background: url(../images/subscribe-bg.jpg) center center / cover no-repeat;
+  background: url("../images/subscribe-bg.jpg") center center / cover no-repeat, #000000;
   width: 100%;
   max-width: 1200px;
   min-height: 411px;
   color: #ffffff;
   text-align: center;
-  padding: 93px 0;
+  padding: 93px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -502,7 +513,7 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 29px;
 }
 
 .subscription-description {
@@ -524,7 +535,7 @@ body {
 }
 
 .subscription-field {
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
@@ -612,21 +623,25 @@ body {
 }
 
 .social-link-vk:after {
-  background: url(../images/icons/social-vk.svg) center center / contain no-repeat;
+  background: url("../images/icons/social-vk.svg") center center / contain no-repeat;
   width: 24px;
   height: 14px;
 }
 
 .social-link-tel:after {
-  background: url(../images/icons/social-tel.svg) center center / contain no-repeat;
+  background: url("../images/icons/social-tel.svg") center center / contain no-repeat;
   width: 18px;
   height: 16px;
 }
 
 .social-link-yt:after {
-  background: url(../images/icons/social-yt.svg) center center / contain no-repeat;
+  background: url("../images/icons/social-yt.svg") center center / contain no-repeat;
   width: 22px;
   height: 17px;
+}
+
+.contacts {
+  max-width: 335px;
 }
 
 .contacts-phone {
@@ -637,6 +652,8 @@ body {
   line-height: 40px;
   text-decoration: none;
   transition: color 0.3s;
+  white-space: nowrap;
+  display: block;
 }
 
 .contacts-phone:hover,
@@ -665,7 +682,7 @@ body {
 /* catalog */
 
 .inner-header {
-  background: url(../images/filter-bg.jpg) center center / cover no-repeat, #000000;
+  background: url("../images/filter-bg.jpg") center center / cover no-repeat, #000000;
   max-width: 1200px;
   color: #ffffff;
   margin-top: -5px;
@@ -700,7 +717,7 @@ body {
   content: "";
   width: 8px;
   height: 8px;
-  background: url(../images/icons/arrow-select.svg) center center / contain no-repeat;
+  background: url("../images/icons/arrow-select.svg") center center / contain no-repeat;
   margin: 0 10px;
   transform: rotate(-90deg);
 }
@@ -719,7 +736,7 @@ body {
   width: 12px;
   height: 12px;
   display: flex;
-  background: url(../images/icons/main.svg) center center / contain no-repeat;
+  background: url("../images/icons/main.svg") center center / contain no-repeat;
 }
 
 a.breadcrumbs-link:hover {
@@ -776,7 +793,7 @@ a.breadcrumbs-link:active {
   left: 50%;
   transform: translate(-50%, -50%);
   content: "";
-  background: url(../images/icons/tick.svg) center center / contain no-repeat;
+  background: url("../images/icons/tick.svg") center center / contain no-repeat;
   width: 12px;
   height: 9px;
   opacity: 0;
@@ -867,6 +884,7 @@ a.breadcrumbs-link:active {
   transition: all 0.3s;
   border: 2px solid #E5E5E5;
   font-family: inherit;
+  background-color: #ffffff;
 }
 
 .select-control:hover {
@@ -900,7 +918,7 @@ a.breadcrumbs-link:active {
   height: 11px;
   right: 20px;
   top: 20px;
-  background: url(../images/icons/arrow-select.svg) center center / contain no-repeat;
+  background: url("../images/icons/arrow-select.svg") center center / contain no-repeat;
   filter: invert(100%);
 }
 
@@ -944,15 +962,15 @@ a.breadcrumbs-link:active {
 }
 
 .catalog-sort-card:after {
-  background: url(../images/icons/icon-table.svg) center center / contain no-repeat;
+  background: url("../images/icons/icon-table.svg") center center / contain no-repeat;
 }
 
 .catalog-sort-full:after {
-  background: url(../images/icons/icon-slideshow.svg) center center / contain no-repeat;
+  background: url("../images/icons/icon-slideshow.svg") center center / contain no-repeat;
 }
 
 .catalog-sort-list:after {
-  background: url(../images/icons/icon-list.svg) center center / contain no-repeat;
+  background: url("../images/icons/icon-list.svg") center center / contain no-repeat;
 }
 
 /* Range */
@@ -1017,7 +1035,6 @@ a.breadcrumbs-link:active {
   position: relative;
   display: flex;
   justify-content: center;
-  /* border: 2px solid #FFFFFF; */
   border-radius: 4px;
   width: 287px;
   height: 48px;
@@ -1175,7 +1192,7 @@ a.breadcrumbs-link:active {
   width: 18px;
   height: 17px;
   display: flex;
-  background: url(../images/icons/star.svg) center center / contain no-repeat;
+  background: url("../images/icons/star.svg") center center / contain no-repeat;
 }
 
 .rating-text {
@@ -1273,7 +1290,7 @@ a.breadcrumbs-link:active {
   height: 11px;
   right: 20px;
   top: 50%;
-  background: url(../images/icons/arrow-select.svg) center center / contain no-repeat;
+  background: url("../images/icons/arrow-select.svg") center center / contain no-repeat;
   filter: invert(100%);
   transform: translateY(-50%);
 }
@@ -1332,7 +1349,7 @@ a.breadcrumbs-link:active {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: url(../images/icons/modal-close.svg) center center / contain no-repeat;
+  background: url("../images/icons/modal-close.svg") center center / contain no-repeat;
   width: 13px;
   height: 13px;
 }
@@ -1378,7 +1395,7 @@ a.breadcrumbs-link:active {
   position: absolute;
   cursor: pointer;
   content: "";
-  background: url(../images/icons/date.svg) center center / contain no-repeat;
+  background: url("../images/icons/date.svg") center center / contain no-repeat;
   right: 19px;
   top: 20px;
   width: 15px;
@@ -1399,6 +1416,7 @@ a.breadcrumbs-link:active {
   border: 3px solid #F2F2F2;
   transition: all 0.3s;
   margin-bottom: 10px;
+  font-family: inherit;
 }
 
 input.search-form-field::placeholder {
@@ -1483,7 +1501,7 @@ input.search-form-field::placeholder {
   transform: translate(-50%, -50%);
   width: 1px;
   height: 9px;
-  background: url(../images/icons/info.svg) center center / contain no-repeat;
+  background: url("../images/icons/info.svg") center center / contain no-repeat;
 }
 
 .search-form-info-content {
@@ -1566,11 +1584,11 @@ input.search-form-field::placeholder {
 }
 
 .button-count-minus:after {
-  background: url(../images/icons/minus.svg) center center / contain no-repeat;
+  background: url("../images/icons/minus.svg") center center / contain no-repeat;
 }
 
 .button-count-plus:after {
-  background: url(../images/icons/plus.svg) center center / contain no-repeat;
+  background: url("../images/icons/plus.svg") center center / contain no-repeat;
 }
 
 .search-form-button {
