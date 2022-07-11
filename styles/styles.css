@@ -652,7 +652,6 @@ body {
   line-height: 40px;
   text-decoration: none;
   transition: color 0.3s;
-  white-space: nowrap;
   display: block;
 }
 
